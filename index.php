@@ -54,7 +54,7 @@ class Project_Controller
         foreach($this->_db as $projectData) 
         {
             $project = new ProjectModel($projectData); // Create a new ProjectModel instance for each project
-            include(APP_ROOT . '/src/views/projects.view.php');
+            include(APP_ROOT . '\src\views\projects.view.php');
         }
     }
 }
@@ -63,43 +63,59 @@ class Project_Controller
 $data = [
     "Projects"=> 
     [
-        "title"=> "Organization Board",
+        "title"=> "SanfordHealth.org",
         "Language" => "C#",
-        "link" => "https://github.com/lalousBTW/OrganizationBoard",
+        "link" => "https://github.com/Harrymullabu/sanfordhealth.org",
         "Img"=> "/media/git.png",
-        "Description"=> "Used C# to make an Organization board that has a TODO List and list of what you have done.
-                         for each project it creates a CSV file that is how we save the data into two columns as todo and Done.
-                         Then each time the app opens and you select the project it reads through the CSV file to show you your
-                         todo list and done list.",
+        "Description"=> "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Cras sed felis eget velit aliquet sagittis. Hac habitasse platea dictumst 
+        vestibulum rhoncus est pellentesque. ",
     ],
     [
-        "title" => "Airfare Data Analysis",
-        "Language"=> "SQL",
-        "link" => "#",
+        "title" => "Bemidji State web dev team",
+        "link" => "https://github.com/Harrymullabu/Bemidjistatewebteamdev/",
+        "Language" => "Html, Php",
         "Img"=> "/media/git.png",
-        "Description"=> "Used SQL inside a Microsoft Access Database to clean and preprocess data. While applying multi-linear regression for airfare prediction",
+        "Description"=> "Auctor elit sed vulputate mi sit.
+        Parturient montes nascetur ridiculus mus mauris vitae. Dolor morbi non arcu
+        risus quis varius. Tincidunt tortor aliquam nulla facilisi cras fermentum
+        odio eu. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. 
+        A erat nam at lectus urna duis. At erat pellentesque adipiscing commodo elit.
+        Fames ac turpis egestas maecenas pharetra convallis posuere.",
     ],
     [
-        "title" => "CSV data Manipulation and Extraction",
+        "title" => "SanfordHealth.org",
         "Language" => "Python",
-        "link" => "https://github.com/lalousBTW/WebscraperCSVtoMySQL",
+        "link" => "https://github.com/Harrymullabu/sanfordhealth.org",
         "Img"=> "/media/git.png",
-        "Description" => "Used Python to webscrape data from a website and save it to a csv file and then add it to a MySQL database"  
+        "Description" => "Auctor elit sed vulputate mi sit.
+        Parturient montes nascetur ridiculus mus mauris vitae. Dolor morbi non arcu
+        risus quis varius. Tincidunt tortor aliquam nulla facilisi cras fermentum
+        odio eu. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. 
+        A erat nam at lectus urna duis. At erat pellentesque adipiscing commodo elit.
+        Fames ac turpis egestas maecenas pharetra convallis posuere."  
     ],
     [
-        "title" => "Autzy",
-        "Language" => "React Native, Node.js",
-        "link" => "https://github.com/lalousBTW/Autzy",
+        "title" => "Airtel Communication",
+        "link" => "https://github.com/Harrymullabu/airtelcommunication",
+        "Language" => "C++",
         "Img"=> "/media/git.png",
-        "Description" => "Full stack app, functions as a social media site for autistic people, firebase integration using Node.js"  
+        "Description" => "Morbi quis commodo odio aenean sed adipiscing.
+         Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. 
+         Senectus et netus et malesuada fames ac. Tellus integer feugiat scelerisque varius morbi.
+        Non curabitur gravida arcu ac tortor dignissim convallis aenean. 
+        Congue eu consequat ac felis donec et"  
     ],
-    [
-        "title" => "JET",
-        "Language" => "GODOT,C#",
-        "link" => "https://github.com/lalousBTW/JET",
-        "Img"=> "/media/git.png",
-        "Description" => "Fun 2D rpg using the GODOT engine and C#, was fun to create this top down rpg"  
-    ]
+    ["title" => "BemidjiState GIS SandBox",
+    "Language" => "Rust",
+    "link" => "https://github.com/Harrymullabu/BemidjistateGissandbox",
+    "Img"=> "/media/git.png",
+    "Description" =>"Morbi quis commodo odio aenean sed adipiscing.
+    Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. 
+    Senectus et netus et malesuada fames ac. Tellus integer feugiat scelerisque varius morbi.
+   Non curabitur gravida arcu ac tortor dignissim convallis aenean. 
+   Congue eu consequat ac felis donec et"],
 ];
 $project = new Project_Controller($data);
 $project->render();
