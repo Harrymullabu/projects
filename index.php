@@ -4,7 +4,7 @@
 $config = parse_ini_file('config.ini', true);
 $environment = $config['ENVIROMENT'];
 $URL_BASE = $config[$environment]['URL_ROOT'];
-define('APP_ROOT' ,$config[$environment]['APP_ROOT']);
+define('APP_ROOT' ,$config[$environment]['ABS_ROOT']);
 class ProjectModel 
 {
     private $_title;
